@@ -1,0 +1,26 @@
+.info {
+  align-items: center;
+  display: flex;
+  color: #ffffff;
+  font: {
+    size: (18 / 16) * 1rem;
+    weight: 400;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &:not(:last-child) {
+    padding-right: (60 / 16) * 1rem;
+  }
+
+  &--reverse i, &--reverse svg {
+    transform: rotate(90deg);
+  }
+
+  i, svg {
+    margin-right: (10 / 16) * 1rem;
+  }
+}

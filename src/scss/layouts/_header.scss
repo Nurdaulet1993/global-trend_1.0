@@ -1,0 +1,28 @@
+.header {
+
+  &__top {
+    height: (50 / 16) * 1rem;
+    background: linear-gradient(30deg, #AAABFE, #FCBAF8);
+
+    .container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__info {
+    display: flex;
+  }
+
+  &__social {
+    text-decoration: none;
+    color: #fff;
+    font-size: (20 / 16) * 1rem;
+
+    &:not(:last-of-type) {
+      margin-right: (16 / 16) * 1rem;
+    }
+  }
+}
