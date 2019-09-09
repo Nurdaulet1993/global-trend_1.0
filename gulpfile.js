@@ -68,7 +68,7 @@ const clean = () => {
 };
 
 const fontAwesomeFonts = () => {
-    return src('./node_modules/@fortawesome/fontawesome-free/webfonts/*').pipe(dest('./src/vendor/font-awesome/webfonts'));
+    return src('./node_modules/@fortawesome/fontawesome-free/webfonts/*').pipe(dest('./build/vendor/font-awesome/webfonts'));
 };
 
 const fontAwesomeJs = () => {
