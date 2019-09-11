@@ -1,4 +1,5 @@
 .header {
+  position: absolute;
 
   &__top {
     height: (50 / 16) * 1rem;
@@ -18,11 +19,47 @@
 
   &__social {
     text-decoration: none;
-    color: gray(4);
+    color: #fff;
     font-size: (20 / 16) * 1rem;
 
     &:not(:last-of-type) {
       margin-right: (16 / 16) * 1rem;
     }
+  }
+
+  &__body {
+    background-color: #fff;
+    box-shadow: 0 4px 24px rgba(#000000, 0.25);
+
+    .container {
+      height: (80 / 16) * 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .nav {
+    display: flex;
+
+    &__link {
+      display: block;
+      text-decoration: none;
+      color: gray(5);
+      transition: all 0.3s;
+
+      &.active {
+        color: $secondary;
+      }
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+
+    &__item:not(:last-of-type) .nav__link{
+      margin-right: (20 / 16) * 1rem;
+    }
+
   }
 }
