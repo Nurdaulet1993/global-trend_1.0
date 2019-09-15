@@ -1,0 +1,16 @@
+.footer {
+  padding: (36 / 16) * 1rem;
+  background-color: gray(1);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+  }
+}

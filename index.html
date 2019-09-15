@@ -8,12 +8,12 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="page">
+    <div class="page" style="height: 2000px; position: relative">
         <header class="section header section--header">
             <div class="header__top">
                 <div class="container">
                     <div class="header__info">
-                        <div class="info">
+                        <div class="info header__info--email">
                             <i class="fas fa-envelope"></i>
                             <a href="mailto:Sapaainash@mail.ru">Sapaainash@mail.ru</a>
                         </div>
@@ -38,7 +38,7 @@
             <div class="header__body">
                 <div class="container">
                     <a href="javascript: void(0)">
-                        <img src="./build/img/logo-origin.svg" alt="Logotype" width="200">
+                        <img class="header__logo" src="./build/img/logo-origin.svg" alt="Logotype">
                     </a>
 
                     <ul class="nav header__nav">
@@ -58,17 +58,40 @@
                             <a href="javascript:void(0)" class="nav__link">Контакты</a>
                         </li>
                     </ul>
+                    <div class="mobile-btn header__mobile-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="header__collapse">
+
+                        <a class="btn btn--primary" href="mailto:Sapaainash@mail.ru">Sapaainash@mail.ru</a>
+                        <a class="btn btn--primary" href="tel:+77784097967">+7 (778) 409 - 79 - 67</a>
+
+                    </div>
                 </div>
             </div>
+
         </header>
-        <section class="section hero sectiom--hero">
-            <div class="container">
-                <div class="hero__content">
-                    <h1>Продукт для Очищения, Омоложения и Оздоровления из 189 Природных Компонентов</h1>
-                    <a href="javascript:void(0)" class="btn btn--primary">Подробнее</a>
+        <section class="section hero section--hero">
+            <div class="hero__wrap">
+                <div class="container">
+                    <div class="hero__content">
+                        <h1>Продукт для Очищения, Омоложения и Оздоровления из 189 Природных Компонентов</h1>
+                        <a href="javascript:void(0)" class="btn btn--primary">Подробнее</a>
+                    </div>
                 </div>
+            </div>
+            <div class="hero__girl">
+                <img src="./build/img/girl.png" alt="girl">
             </div>
         </section>
+        <footer class="section footer section--footer">
+            <div class="container">
+                <img src="./build/img/logo-white.svg" alt="Logotype">
+                <h4>Copyright © 2019 by Satbergen Nurdaulet</h4>
+            </div>
+        </footer>
     </div>
 
 

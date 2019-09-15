@@ -1,5 +1,9 @@
 .header {
-  position: absolute;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3000;
+  width: 100%;
 
   &__top {
     height: (50 / 16) * 1rem;
@@ -16,6 +20,11 @@
   &__info {
     display: flex;
   }
+  &__info--email {
+    @include mq(medium) {
+      display: none!important;
+    }
+  }
 
   &__social {
     text-decoration: none;
@@ -29,16 +38,47 @@
 
   &__body {
     background-color: #fff;
-    box-shadow: 0 4px 24px rgba(#000000, 0.25);
+    overflow: visible;
+    transition: all 300ms;
+
+
+    &.show {
+      transform: translateX(-250px);
+    }
 
     .container {
       height: (80 / 16) * 1rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      transition: all 500ms;
+    }
+
+    &.sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 200;
+      box-shadow: 0 4px 24px rgba(#000000, 0.25);
+
+      .container {
+        height: (60 / 16) * 1rem;
+      }
+
+      .header__logo {
+        width: (150 / 16) * 1rem;
+      }
+
+      .header__collapse{
+        height: 100vh!important;
+      }
     }
   }
 
+  &__logo {
+    width: 200px;
+    transition: all 0.8s;
+  }
   .nav {
     display: flex;
 
@@ -61,5 +101,50 @@
       margin-right: (20 / 16) * 1rem;
     }
 
+  }
+
+  &__collapse {
+    width: (250 / 16) * 1rem;
+    height: calc(100vh - 50px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translate3d(250px, 0,0);
+    background-color: #fff;
+    z-index: 1000;
+    @include border($direction: left);
+    text-align: center;
+
+    .nav {
+      display: block;
+      padding-top: (20 / 16) * 1rem;
+      margin-bottom: (30 / 16) * 1rem;
+
+      &__link {
+        margin-right: 0!important;
+        padding: (14 / 16) * 1rem 0;
+        text-align: center;
+
+      }
+
+      &__item:not(:last-of-type) .nav__link{
+        @include border($direction: bottom);
+      }
+    }
+
+    .info {
+      color: gray(5);
+      margin-bottom: (20 /16) * 1rem;
+      padding-right: 0!important;
+      padding-left: (20 / 16) * 1rem;
+    }
+
+    .btn--primary {
+      width: (192 / 16) * 1rem;
+      text-align: center;
+      padding: (14 / 16) * 1rem  0;
+      text-transform: none;
+      margin-bottom: (15 / 16) * 1rem;
+    }
   }
 }

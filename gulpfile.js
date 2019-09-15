@@ -53,11 +53,11 @@ const scripts = () => {
         .pipe(sourcemaps.init())
         .pipe(babel())
         .pipe(concat('all.js'))
-        .pipe(uglify({toplevel: true}))
-        .pipe(sourcemaps.write('./'))
+        // .pipe(uglify({toplevel: true}))
         .pipe(rename({
             suffix: '.min'
         }))
+        .pipe(sourcemaps.write('./'))
         .pipe(dest('./build/js'))
         .pipe(browserSync.stream());
 

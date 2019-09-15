@@ -1,0 +1,25 @@
+%button {
+  display: inline-block;
+  padding: (18 / 16) * 1rem  (66 / 16) * 1rem;
+  text: {
+    decoration: none;
+    transform: uppercase;
+  }
+  border-radius: (40 / 16) * 1rem;
+  transition: all 400ms;
+  &:hover {
+    transform: translateY(-15%);
+  }
+}
+
+.btn {
+  @extend %button;
+
+
+}
+
+.btn--primary {
+  color: #fff;
+  background: linear-gradient(90deg, #6D6EF4 0%, #F55BEB 100%);
+  box-shadow: 0 4px 24px #886AF3;
+}

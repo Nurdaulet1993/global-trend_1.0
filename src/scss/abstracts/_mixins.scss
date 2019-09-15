@@ -1,0 +1,44 @@
+@mixin mq($size) {
+  @if(map_has_key($breakpoints, $size)){
+
+    $breakpoint: map_get($breakpoints, $size);
+
+    @media only screen and (max-width: $breakpoint) {
+      @content;
+    }
+
+  }@else if  type_of($size) == number and not unitless($size){
+    @media only screen and (max-width: $size) {
+      @content;
+    }
+  }@else {
+    @error 'The mq needs to be puted a number with units or jey from $breakpoints. You entered #{$size}'
+  }
+};
+
+@mixin mqm($size) {
+  @if(map_has_key($breakpoints, $size)){
+
+    $breakpoint: map_get($breakpoints, $size);
+
+    @media only screen and (min-width: $breakpoint) {
+      @content;
+    }
+
+  }@else if  type_of($size) == number and not unitless($size){
+    @media only screen and (min-width: $size) {
+      @content;
+    }
+  }@else {
+    @error 'The mq needs to be puted a number with units or jey from $breakpoints. You entered #{$size}'
+  }
+};
+
+@mixin border($width: 1px, $type: solid, $color: #e5e5e5, $direction: ' ') {
+  @if($direction == ' ') {
+    border: $width $type $color;
+  }@else {
+    border-#{$direction}: $width $type $color;
+  }
+
+}

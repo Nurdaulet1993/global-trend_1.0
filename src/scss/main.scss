@@ -2,6 +2,7 @@
 
 @import "abstracts/variables";
 @import "abstracts/functions";
+@import "abstracts/mixins";
 
 @import "base/reset";
 @import "base/typography";
@@ -10,5 +11,8 @@
 @import "layouts/container";
 @import "layouts/header";
 @import "layouts/hero";
+@import "layouts/footer";
 
 @import "components/info";
+@import "components/buttons";
+@import "components/mobile-button";
